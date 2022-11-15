@@ -3,8 +3,53 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+@import url('https://fonts.googleapis.com/css?family=Trirong');
 body {
-  background-color: #000000;
+  background-color: rgb(32,32,32)  ;
   font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem;
+}
+.navbar.active{
+  transition: ease-in-out ;
+  color: white;
+  background-color: black ;
+  height: 70px;
+}
+.gallery{
+  background-color: #ECCE92;
+}
+.text-3xl{
+  font-family: "Sofia", sans-serif;
+  text-shadow: 3px 3px 3px #ababab;
+}
+.text-5xl{
+  font-family: "Trirong", serif;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+
+}
+#mobile{
+  color: white;
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav{
+    display: none;
+  }
+  .nav-icon{
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
 }
